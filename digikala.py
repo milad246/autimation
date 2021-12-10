@@ -25,3 +25,7 @@ driver.find_element('xpath', '//button[@type="submit"]').click()
 #View username in land
 driver.find_element('class name', 'c-header__btn-profile').click()
 sleep(3)
+
+#Assertion Login name
+login_name = driver.find_element('class name', "c-header__profile-dropdown-user-name").text
+assert login_name == 'Milad Hajizadeh'
